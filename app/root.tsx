@@ -25,7 +25,8 @@ export const links: LinksFunction = () => {
 export const meta = () => ({
   charset: "utf-8",
   title: "New Remix App",
-  viewport: "width=device-width,initial-scale=1",
+  viewport:
+    "width=device-width,initial-scale=1, maximum-scale=1.0,user-scalable=0",
   "apple-mobile-web-app-capable": "yes",
   // <meta name="theme-color" content="#f22" />
   "apple-mobile-web-app-status-bar-style": "default",
