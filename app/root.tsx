@@ -12,12 +12,26 @@ import styles from "./styles/app.css";
 
 // 3
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    { rel: "stylesheet", href: styles },
+    {
+      rel: "manifest",
+      href: "/manifest.json",
+      id: "manifest-placeholder",
+    },
+  ];
 };
-export const meta: MetaFunction = () => ({
+
+export const meta = () => ({
   charset: "utf-8",
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1",
+  "apple-mobile-web-app-capable": "yes",
+  // <meta name="theme-color" content="#f22" />
+  "apple-mobile-web-app-status-bar-style": "default",
+  display: "standalone",
+  "mobile-web-app-capable": "yes",
+  "apple-touch-fullscreen": "yes",
 });
 
 export default function App() {
