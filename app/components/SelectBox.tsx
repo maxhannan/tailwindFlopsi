@@ -53,7 +53,7 @@ export default function SelectBox() {
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
                       active
-                        ? "bg-gray-800 text-blue-900 dark:text-blue-400"
+                        ? "dark:bg-gray-800 bg-blue-300 text-blue-900 dark:text-blue-400"
                         : "text-gray-900 dark:text-gray-50"
                     }`
                   }
