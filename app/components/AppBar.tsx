@@ -2,7 +2,7 @@ const AppBar = () => {
   return (
     <nav className="bg-gray-50 px-6 sm:px-4 py-4 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <h1 className="text-2xl text-blue-600">Recipes</h1>
+        <h1 className="text-2xl text-blue-600 dark:text-blue-400">Recipes</h1>
         <div className="flex justify-between w-24">
           <svg
             xmlns="http://www.w3.org/2000/svg"

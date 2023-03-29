@@ -22,14 +22,14 @@ export default function Index() {
           <div className=" flex justify-between space-x-2 ">
             <SearchBar />
             <button className="grow-2">
-              <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 hover:bg-gray-200 group">
+              <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-900 hover:bg-gray-800 group">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 group-hover:text-blue-600"
+                  className="w-6 h-6 group-hover:text-blue-600  group-hover:dark:text-blue-400 dark:text-gray-50"
                 >
                   <path
                     strokeLinecap="round"

@@ -3,7 +3,7 @@ import { useState } from "react";
 export const BottomNav = () => {
   const [active, setActive] = useState("home");
   return (
-    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-full bottom-6 left-1/2 border shadow-md bg-gray-50  border-gray-200">
+    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-full bottom-6 left-1/2 border shadow-md bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600">
       <div className="grid h-full max-w-lg grid-cols-4 mx-auto">
         <button
           data-tooltip-target="tooltip-home"
@@ -20,7 +20,7 @@ export const BottomNav = () => {
             strokeWidth={1.5}
             stroke="currentColor"
             className={
-              "transition ease-in-out  w-8 h-8 mb-1  dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 " +
+              "transition ease-in-out  w-8 h-8 mb-1  group-hover:text-blue-600 dark:group-hover:text-blue-500 " +
               (active === "home" ? "text-blue-500 scale-110" : "text-gray-500 ")
             }
           >

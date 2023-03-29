@@ -19,7 +19,7 @@ export default function SelectBox() {
     <div className="w-full">
       <Listbox value={selected} onChange={setSelected} multiple>
         <div className="relative mt-1">
-          <Listbox.Button className="relative w-full cursor-default border py-2 border-gray-300 rounded-lg bg-gray-50  pl-3 pr-10 text-left  text-lg focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 ">
+          <Listbox.Button className="relative w-full cursor-default border py-2 border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 pl-3 pr-10 text-left  text-lg focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 ">
             <span className="flex flex-wrap gap-2 items-center ">
               {selected.length > 0 ? (
                 selected.map((person) => (
@@ -46,13 +46,15 @@ export default function SelectBox() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className=" z-50 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
+            <Listbox.Options className=" z-50 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white dark:bg-gray-700 py-1 text-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
               {people.map((person, personIdx) => (
                 <Listbox.Option
                   key={personIdx}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? "bg-blue-100 text-blue-900" : "text-gray-900"
+                      active
+                        ? "bg-gray-800 text-blue-900 dark:text-blue-400"
+                        : "text-gray-900 dark:text-gray-50"
                     }`
                   }
                   value={person}
