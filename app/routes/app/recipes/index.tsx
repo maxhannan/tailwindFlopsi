@@ -61,10 +61,10 @@ const Recipes = () => {
             <SelectBox />
           </div>
         </Transition>
-        <div className=" flex justify-between space-x-2  mt-2 ">
+        <div className=" flex justify-between space-x-2  my-2 ">
           <SearchBar />
           <button className="grow-2" onClick={() => setOpen(!open)}>
-            <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-900 dark:hover:bg-gray-800 hover:bg-gray-200 group">
+            <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-neutral-900 dark:hover:bg-neutral-800 hover:bg-gray-200 group">
               {!open ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
