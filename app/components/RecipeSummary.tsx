@@ -5,8 +5,12 @@ const RecipeSummary = () => {
         <span className="text-xl text-gray-100 dark:text-gray-300">JL</span>
       </div>
       <div className="ml-4">
-        <h6 className="text-lg dark:text-gray-50">Saffron Mayo</h6>
-        <h6 className="text-md dark:text-blue-400">Saffron Mayo</h6>
+        <h6 className="text-md text-gray-900 dark:text-gray-50">
+          Saffron Mayo
+        </h6>
+        <h6 className="text-sm text-gray-600 dark:text-blue-400">
+          Saffron Mayo
+        </h6>
       </div>
       <div className=" ml-auto ">
         <svg
