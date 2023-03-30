@@ -22,7 +22,7 @@ const Recipes = () => {
       <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 ease-linear ">
         <Transition
           show={openFilter}
-          className=" z-40 grid grid-cols-2 gap-2 mb-1"
+          className=" z-40 grid grid-cols-2 gap-2 mt-3"
           enter="transition-all ease-linear duration-500 overflow-hidden"
           enterFrom="transform opacity-0 max-h-0"
           enterTo="transform opacity-100 max-h-96"
@@ -65,7 +65,7 @@ const Recipes = () => {
             <SelectBox />
           </div>
         </Transition>
-        <div className=" flex justify-between space-x-2  my-2 ">
+        <div className=" flex justify-between space-x-2  my-2 mt-3">
           <SearchBar />
           <button className="grow-2" onClick={() => setOpenFilter(!openFilter)}>
             <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-neutral-900 dark:hover:bg-neutral-800 hover:bg-gray-200 group">
