@@ -1,15 +1,25 @@
 import { Transition } from "@headlessui/react";
+import { useLocation, useNavigate } from "@remix-run/react";
 import { Fragment, useState } from "react";
 
 export const BottomNav = () => {
-  const [active, setActive] = useState("home");
+  const location = useLocation().pathname.split("/")[2];
+  console.log(location);
+  const [active, setActive] = useState(location);
+
+  const navigate = useNavigate();
+
+  const handleNav = (path: String) => {
+    setActive(path);
+    navigate(`/app/${path}`);
+  };
   return (
     <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-full bottom-6 left-1/2 border shadow-md bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600">
       <div className={"grid h-full max-w-lg   mx-auto grid-cols-4"}>
         <button
           data-tooltip-target="tooltip-home"
           type="button"
-          onClick={() => setActive("home")}
+          onClick={() => handleNav("prep")}
           className={
             "inline-flex flex-col items-center justify-center px-5 rounded-l-full  dark:hover:bg-gray-800  group"
           }
@@ -22,7 +32,7 @@ export const BottomNav = () => {
             stroke="currentColor"
             className={
               "transition ease-in-out  w-8 h-8 mb-1  group-hover:text-blue-600 dark:group-hover:text-blue-500 " +
-              (active === "home" ? "text-blue-500 scale-110" : "text-gray-500 ")
+              (active === "prep" ? "text-blue-500 scale-110" : "text-gray-500 ")
             }
           >
             <path
@@ -46,7 +56,7 @@ export const BottomNav = () => {
         <button
           data-tooltip-target="tooltip-wallet"
           type="button"
-          onClick={() => setActive("wallet")}
+          onClick={() => handleNav("recipes")}
           className="inline-flex flex-col items-center justify-center px-5 dark:hover:bg-gray-800 group"
         >
           <svg
@@ -57,7 +67,7 @@ export const BottomNav = () => {
             stroke="currentColor"
             className={
               "transition ease-in-out  w-8 h-8 mb-1  dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 " +
-              (active === "wallet"
+              (active === "recipes"
                 ? "text-blue-500 scale-110"
                 : "text-gray-500 ")
             }
