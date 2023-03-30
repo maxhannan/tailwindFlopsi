@@ -21,14 +21,14 @@ export default function Index() {
         enterFrom="opacity-0"
         enterTo="opacity-100"
       >
-        <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 ">
+        <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 ease-linear ">
           <Transition
             show={open}
             className=" z-40 grid grid-cols-2 gap-2 mb-1"
-            enter="transition-all  ease-in duration-500 overflow-hidden"
+            enter="transition-all ease-linear duration-500 overflow-hidden"
             enterFrom="transform opacity-0 max-h-0"
             enterTo="transform opacity-100 max-h-96"
-            leave="transition-all ease-out duration-500 overflow-hidden"
+            leave="transition-all ease-linear duration-500 overflow-hidden"
             leaveFrom="transform opacity-100 max-h-96"
             leaveTo="transform opacity-0 max-h-0"
           >
@@ -67,7 +67,7 @@ export default function Index() {
               <SelectBox />
             </div>
           </Transition>
-          <div className=" flex justify-between space-x-2 ">
+          <div className=" flex justify-between space-x-2  mt-2 ">
             <SearchBar />
             <button className="grow-2" onClick={() => setOpen(!open)}>
               <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-900 dark:hover:bg-gray-800 hover:bg-gray-200 group">
