@@ -3,6 +3,7 @@ import { MenuItem, Select } from "@mui/material";
 import { useState } from "react";
 import AppBar from "~/components/AppBar";
 import { BottomNav } from "~/components/BottomNav";
+import CheckBoxGroup from "~/components/CheckBoxGroup";
 import RecipeSummary from "~/components/RecipeSummary";
 import SearchBar from "~/components/SearchBar";
 
@@ -23,7 +24,7 @@ export default function Index() {
         <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 ">
           <Transition
             show={open}
-            className=" z-40 grid grid-cols-2 gap-x-2"
+            className=" z-40 grid grid-cols-2 gap-2 mb-1"
             enter="transition ease-in duration-400"
             enterFrom="opacity-0 "
             enterTo="opacity-100  "
@@ -31,10 +32,40 @@ export default function Index() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <SelectBox />
-            <SelectBox />
-            <SelectBox />
-            <SelectBox />
+            <div className=" col-span-2">
+              <SelectBox />
+            </div>
+            <div className="flex items-center ml-2">
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                htmlFor="default-checkbox"
+                className="ml-2 text-md font-medium text-gray-900 dark:text-gray-300"
+              >
+                Default checkbox
+              </label>
+            </div>
+            <div className="flex items-center ">
+              <input
+                id="default-checkbox2"
+                type="checkbox"
+                value=""
+                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                htmlFor="default-checkbox2"
+                className="ml-2 text-md font-medium text-gray-900 dark:text-gray-300"
+              >
+                Default checkbox
+              </label>
+            </div>
+            <div className=" col-span-2">
+              <SelectBox />
+            </div>
           </Transition>
           <div className=" flex justify-between space-x-2 ">
             <SearchBar />
@@ -57,7 +88,6 @@ export default function Index() {
               </div>
             </button>
           </div>
-          <SelectBox />
 
           <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 mt-1">
             <RecipeSummary />
