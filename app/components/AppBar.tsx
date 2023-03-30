@@ -6,13 +6,13 @@ const AppBar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation().pathname;
   return (
-    <nav className="bg-gray-50 px-4 py-4 dark:bg-gray-900 fixed w-full z-50 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="bg-gray-50 px-4 py-4 dark:bg-gray-900  fixed w-full z-50 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <h1 className="text-2xl text-blue-600 dark:text-blue-400 ">Recipes</h1>
+        <h1 className="text-xl text-blue-600 dark:text-blue-400 ">Recipes</h1>
         <div className="flex justify-between ">
           <Transition
             show={location === "/app/recipes"}
-            enter="transition-all transform ease-linear cubic-bezier(0.175, 0.885, 0.32, 1.275) duration-100"
+            enter="transition-all transform ease-linear  duration-100"
             enterFrom=" opacity-0 -translate-y-full "
             enterTo=" opacity-100 translate-y-0"
             leave="transition ease-in duration-100"
@@ -21,7 +21,7 @@ const AppBar = () => {
           >
             <button
               type="button"
-              className="transition duration-200 text-blue-700 border border-blue-700 active:bg-blue-700 active:text-gray-50 active:scale-110 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+              className=" h-10 transition duration-200  text-blue-700 border border-blue-700 active:bg-blue-700 active:text-gray-50 active:scale-110 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-400 dark:text-blue-400 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const AppBar = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className="w-4 h-4"
               >
                 <path
                   strokeLinecap="round"
@@ -37,14 +37,14 @@ const AppBar = () => {
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-              <span className="text-md ml-1">Add a Recipe</span>
+              <span className=" ml-1">Add a Recipe</span>
               <span className="sr-only">Icon description</span>
             </button>
           </Transition>
           <button
             onClick={() => setOpen(!open)}
             type="button"
-            className="text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
+            className=" h-10 w-10 text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:border-blue-400 dark:text-blue-400 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -14,14 +14,14 @@ export const BottomNav = () => {
     navigate(`/app/${path}`);
   };
   return (
-    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-lg  bottom-6 left-1/2 border shadow-md bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-lg  bottom-6 left-1/2 border shadow-md  bg-gray-50  dark:bg-gray-700 border-gray-200 dark:border-gray-600">
       <div className={"grid h-full max-w-lg   mx-auto grid-cols-4"}>
         <button
           data-tooltip-target="tooltip-home"
           type="button"
           onClick={() => handleNav("prep")}
           className={
-            "inline-flex flex-col items-center justify-center px-5 rounded-l-lg  dark:hover:bg-gray-800  group"
+            "inline-flex flex-col items-center justify-center px-5 rounded-l-lg    group"
           }
         >
           <svg
@@ -32,7 +32,9 @@ export const BottomNav = () => {
             stroke="currentColor"
             className={
               "transition ease-in-out  w-8 h-8 mb-1  group-hover:text-blue-600 dark:group-hover:text-blue-500 " +
-              (active === "prep" ? "text-blue-500 scale-110" : "text-gray-500 ")
+              (active === "prep"
+                ? "text-blue-500 scale-110"
+                : "text-gray-500 dark:text-gray-400 ")
             }
           >
             <path
@@ -57,7 +59,7 @@ export const BottomNav = () => {
           data-tooltip-target="tooltip-wallet"
           type="button"
           onClick={() => handleNav("recipes")}
-          className="inline-flex flex-col items-center justify-center px-5 dark:hover:bg-gray-800 group"
+          className="inline-flex flex-col items-center justify-center px-5  group"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,10 +68,10 @@ export const BottomNav = () => {
             strokeWidth={1.5}
             stroke="currentColor"
             className={
-              "transition ease-in-out  w-8 h-8 mb-1  dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 " +
+              "transition ease-in-out  w-8 h-8 mb-1  group-hover:text-blue-600 dark:group-hover:text-blue-500 " +
               (active === "recipes"
-                ? "text-blue-500 scale-110"
-                : "text-gray-500 ")
+                ? "text-blue-500  scale-110"
+                : "text-gray-500 dark:text-gray-400 ")
             }
           >
             <path
