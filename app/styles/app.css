@@ -1024,12 +1024,25 @@ video {
   border-bottom-right-radius: 0.5rem !important;
 }
 
+.rounded-r-md {
+  border-top-right-radius: 0.375rem !important;
+  border-bottom-right-radius: 0.375rem !important;
+}
+
 .border {
   border-width: 1px !important;
 }
 
 .border-b {
   border-bottom-width: 1px !important;
+}
+
+.border-t {
+  border-top-width: 1px !important;
+}
+
+.border-r {
+  border-right-width: 1px !important;
 }
 
 .border-none {
@@ -1456,9 +1469,28 @@ html {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity)) !important;
 }
 
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:text-blue-700:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(29 78 216 / var(--tw-text-opacity)) !important;
+}
+
+.focus\:z-10:focus {
+  z-index: 10 !important;
+}
+
 .focus\:border-blue-500:focus {
   --tw-border-opacity: 1 !important;
   border-color: rgb(59 130 246 / var(--tw-border-opacity)) !important;
+}
+
+.focus\:text-blue-700:focus {
+  --tw-text-opacity: 1 !important;
+  color: rgb(29 78 216 / var(--tw-text-opacity)) !important;
 }
 
 .focus\:outline-none:focus {
@@ -1492,6 +1524,11 @@ html {
 .focus\:ring-blue-500:focus {
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity)) !important;
+}
+
+.focus\:ring-blue-700:focus {
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(29 78 216 / var(--tw-ring-opacity)) !important;
 }
 
 .focus-visible\:border-indigo-500:focus-visible {
@@ -1657,6 +1694,11 @@ html {
     background-color: rgb(38 38 38 / var(--tw-bg-opacity)) !important;
   }
 
+  .dark\:hover\:bg-gray-600:hover {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(75 85 99 / var(--tw-bg-opacity)) !important;
+  }
+
   .dark\:hover\:text-white:hover {
     --tw-text-opacity: 1 !important;
     color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
@@ -1665,6 +1707,11 @@ html {
   .dark\:focus\:border-blue-500:focus {
     --tw-border-opacity: 1 !important;
     border-color: rgb(59 130 246 / var(--tw-border-opacity)) !important;
+  }
+
+  .dark\:focus\:text-white:focus {
+    --tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
   }
 
   .dark\:focus\:ring-blue-500:focus {
