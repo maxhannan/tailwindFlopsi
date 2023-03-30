@@ -30,7 +30,7 @@ export default function SelectBox() {
               {selected.length > 0 ? (
                 selected.map((person) => <Chip key={person} content={person} />)
               ) : (
-                <p className=" m-0.5 text-gray-600 text-md">Select Allergens</p>
+                <p className=" m-0.5 text-gray-700 text-md">Select Allergens</p>
               )}
             </span>
 

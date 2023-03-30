@@ -38,7 +38,7 @@ const Recipes = () => {
             />
             <label
               htmlFor="default-checkbox"
-              className="ml-2 text-md font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-md font-medium text-gray-800 dark:text-gray-300"
             >
               Default checkbox
             </label>
@@ -52,7 +52,7 @@ const Recipes = () => {
             />
             <label
               htmlFor="default-checkbox2"
-              className="ml-2 text-md font-medium text-gray-900 dark:text-gray-300"
+              className="ml-2 text-md font-medium text-gray-800 dark:text-gray-300"
             >
               Default checkbox
             </label>
