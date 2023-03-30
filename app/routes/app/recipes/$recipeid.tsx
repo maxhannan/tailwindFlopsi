@@ -29,7 +29,7 @@ const RecipePage = () => {
                 </div>
               </th>
               <th scope="col" className="px-6 py-3 border w-5/12 ">
-                Product name
+                Ingredient
               </th>
               <th scope="col" className="px-4 py-3 border ">
                 Amount

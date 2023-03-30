@@ -1010,6 +1010,10 @@ video {
   border-radius: 0.375rem !important;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
 .rounded-l-lg {
   border-top-left-radius: 0.5rem !important;
   border-bottom-left-radius: 0.5rem !important;
