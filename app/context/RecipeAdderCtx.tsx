@@ -1,9 +1,19 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import type { ReactNode } from "react";
 
-const AddRecipeContext = createContext();
+interface DialogContextType {
+  open: boolean;
+  handleClickOpen: () => void;
+  handleCloseDialog: () => void;
+}
 
-export const AddRecipeContextProvider = ({ children }) => {
-  const [open, setOpen] = useState(false);
+const AddRecipeContext = createContext<DialogContextType | null>(null);
+
+interface PropsInterface {
+  children: ReactNode;
+}
+export const AddRecipeContextProvider = ({ children }: PropsInterface) => {
+  const [open, setOpen] = useState<DialogContextType["open"]>(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -20,6 +30,18 @@ export const AddRecipeContextProvider = ({ children }) => {
       {children}
     </AddRecipeContext.Provider>
   );
+};
+
+export const useDialogContext = () => {
+  const currentDialogContext = useContext(AddRecipeContext);
+
+  if (!currentDialogContext) {
+    throw new Error(
+      "useDialogContext has to be used within <AddRecipeContext.Provider>"
+    );
+  }
+
+  return currentDialogContext;
 };
 
 export default AddRecipeContext;

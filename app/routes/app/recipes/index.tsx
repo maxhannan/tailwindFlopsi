@@ -1,15 +1,16 @@
 import { Transition } from "@headlessui/react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import FullScreenDialog from "~/components/FullScreenDialog";
 
 import RecipeFeed from "~/components/RecipeFeed";
 import SearchBar from "~/components/SearchBar";
 import SelectBox from "~/components/SelectBox";
-import AddRecipeContext from "~/context/RecipeAdderCtx";
+import { useDialogContext } from "~/context/RecipeAdderCtx";
 
 const Recipes = () => {
   const [openFilter, setOpenFilter] = useState(false);
-  const { open, handleCloseDialog } = useContext(AddRecipeContext);
+  const { open, handleCloseDialog } = useDialogContext();
+
   return (
     <Transition
       appear

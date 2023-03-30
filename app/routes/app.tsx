@@ -1,4 +1,3 @@
-import { redirect } from "@remix-run/node";
 import { Outlet } from "@remix-run/react";
 import AppBar from "~/components/AppBar";
 import { BottomNav } from "~/components/BottomNav";

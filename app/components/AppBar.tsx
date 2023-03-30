@@ -1,10 +1,10 @@
 import { Transition } from "@headlessui/react";
 import { useLocation } from "@remix-run/react";
-import { useContext } from "react";
-import AddRecipeContext from "~/context/RecipeAdderCtx";
+
+import { useDialogContext } from "~/context/RecipeAdderCtx";
 
 const AppBar = () => {
-  const { handleClickOpen } = useContext(AddRecipeContext);
+  const { handleClickOpen } = useDialogContext();
 
   const location = useLocation().pathname;
   return (

@@ -3,12 +3,12 @@ import { useState } from "react";
 
 export const BottomNav = () => {
   const location = useLocation().pathname.split("/")[2];
-  console.log(location);
-  const [active, setActive] = useState(location);
+
+  const [active, setActive] = useState<string>(location);
 
   const navigate = useNavigate();
 
-  const handleNav = (path: String) => {
+  const handleNav = (path: string) => {
     setActive(path);
     navigate(`/app/${path}`);
   };
