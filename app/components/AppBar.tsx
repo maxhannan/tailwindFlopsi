@@ -1,18 +1,20 @@
 import { Transition } from "@headlessui/react";
+import { useLocation } from "@remix-run/react";
 import { Fragment, useState } from "react";
 
 const AppBar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation().pathname;
   return (
     <nav className="bg-gray-50 px-4 py-4 dark:bg-gray-900 fixed w-full z-50 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <h1 className="text-2xl text-blue-600 dark:text-blue-400 ">Recipes</h1>
         <div className="flex justify-between ">
           <Transition
-            show={open}
-            enter="transition ease-in duration-300"
-            enterFrom="opacity-0  "
-            enterTo="opacity-100 "
+            show={location === "/app/recipes"}
+            enter="transition-all transform ease-linear cubic-bezier(0.175, 0.885, 0.32, 1.275) duration-100"
+            enterFrom=" opacity-0 -translate-y-full "
+            enterTo=" opacity-100 translate-y-0"
             leave="transition ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
