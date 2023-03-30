@@ -1,9 +1,11 @@
 import { Transition } from "@headlessui/react";
 import { useLocation } from "@remix-run/react";
-import { Fragment, useState } from "react";
+import { useContext } from "react";
+import AddRecipeContext from "~/context/RecipeAdderCtx";
 
 const AppBar = () => {
-  const [open, setOpen] = useState(false);
+  const { handleClickOpen } = useContext(AddRecipeContext);
+
   const location = useLocation().pathname;
   return (
     <nav className="bg-gray-50 px-4 h-16 dark:bg-neutral-800  fixed w-full z-50 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
@@ -21,6 +23,7 @@ const AppBar = () => {
           >
             <button
               type="button"
+              onClick={handleClickOpen}
               className=" h-10 transition duration-200 bg-gray-200 bg-opacity-60 dark:bg-neutral-700 shadow-inner text-neutral-600  active:bg-blue-700 active:text-gray-50 active:scale-110 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs p-2.5 text-center inline-flex items-center  dark:border-blue-400 dark:text-neutral-400 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500"
             >
               <svg

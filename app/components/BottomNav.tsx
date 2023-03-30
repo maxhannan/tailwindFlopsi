@@ -1,6 +1,5 @@
-import { Transition } from "@headlessui/react";
 import { useLocation, useNavigate } from "@remix-run/react";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 export const BottomNav = () => {
   const location = useLocation().pathname.split("/")[2];

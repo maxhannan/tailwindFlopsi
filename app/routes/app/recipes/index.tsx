@@ -1,12 +1,15 @@
 import { Transition } from "@headlessui/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import FullScreenDialog from "~/components/FullScreenDialog";
 
 import RecipeFeed from "~/components/RecipeFeed";
 import SearchBar from "~/components/SearchBar";
 import SelectBox from "~/components/SelectBox";
+import AddRecipeContext from "~/context/RecipeAdderCtx";
 
 const Recipes = () => {
-  const [open, setOpen] = useState(false);
+  const [openFilter, setOpenFilter] = useState(false);
+  const { open, handleCloseDialog } = useContext(AddRecipeContext);
   return (
     <Transition
       appear
@@ -17,7 +20,7 @@ const Recipes = () => {
     >
       <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 ease-linear ">
         <Transition
-          show={open}
+          show={openFilter}
           className=" z-40 grid grid-cols-2 gap-2 mb-1"
           enter="transition-all ease-linear duration-500 overflow-hidden"
           enterFrom="transform opacity-0 max-h-0"
@@ -63,9 +66,9 @@ const Recipes = () => {
         </Transition>
         <div className=" flex justify-between space-x-2  my-2 ">
           <SearchBar />
-          <button className="grow-2" onClick={() => setOpen(!open)}>
+          <button className="grow-2" onClick={() => setOpenFilter(!openFilter)}>
             <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-neutral-900 dark:hover:bg-neutral-800 hover:bg-gray-200 group">
-              {!open ? (
+              {!openFilter ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -101,6 +104,13 @@ const Recipes = () => {
         </div>
         <RecipeFeed />
       </div>
+      <FullScreenDialog
+        title={"Add A recipe"}
+        open={open}
+        handleClose={handleCloseDialog}
+      >
+        Add
+      </FullScreenDialog>
     </Transition>
   );
 };
