@@ -14,14 +14,14 @@ export const BottomNav = () => {
     navigate(`/app/${path}`);
   };
   return (
-    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-full bottom-6 left-1/2 border shadow-md bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-lg  bottom-6 left-1/2 border shadow-md bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600">
       <div className={"grid h-full max-w-lg   mx-auto grid-cols-4"}>
         <button
           data-tooltip-target="tooltip-home"
           type="button"
           onClick={() => handleNav("prep")}
           className={
-            "inline-flex flex-col items-center justify-center px-5 rounded-l-full  dark:hover:bg-gray-800  group"
+            "inline-flex flex-col items-center justify-center px-5 rounded-l-lg  dark:hover:bg-gray-800  group"
           }
         >
           <svg
@@ -130,7 +130,7 @@ export const BottomNav = () => {
           data-tooltip-target="tooltip-profile"
           type="button"
           onClick={() => setActive("profile")}
-          className="inline-flex flex-col items-center justify-center px-5 rounded-r-full group"
+          className="inline-flex flex-col items-center justify-center px-5 rounded-r-lg  group"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
