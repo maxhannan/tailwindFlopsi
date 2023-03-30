@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
 
 export const BottomNav = () => {
   const [active, setActive] = useState("home");
   return (
     <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-full bottom-6 left-1/2 border shadow-md bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600">
-      <div className="grid h-full max-w-lg grid-cols-4 mx-auto">
+      <div className={"grid h-full max-w-lg   mx-auto grid-cols-4"}>
         <button
           data-tooltip-target="tooltip-home"
           type="button"
@@ -78,6 +79,7 @@ export const BottomNav = () => {
           Wallet
           <div className="tooltip-arrow" data-popper-arrow></div>
         </div>
+
         <button
           data-tooltip-target="tooltip-settings"
           type="button"

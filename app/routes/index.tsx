@@ -1,5 +1,6 @@
 import { Transition } from "@headlessui/react";
 import { MenuItem, Select } from "@mui/material";
+import { useState } from "react";
 import AppBar from "~/components/AppBar";
 import { BottomNav } from "~/components/BottomNav";
 import RecipeSummary from "~/components/RecipeSummary";
@@ -8,20 +9,36 @@ import SearchBar from "~/components/SearchBar";
 import SelectBox from "~/components/SelectBox";
 
 export default function Index() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="h-screen container mx-auto max-w-3xl py-20 px-3">
       <AppBar />
       <Transition
         appear
         show
-        enter="transition ease-in duration-100"
+        enter="transition ease-in duration-300"
         enterFrom="opacity-0"
         enterTo="opacity-100"
       >
         <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 ">
+          <Transition
+            show={open}
+            className=" z-40 grid grid-cols-2 gap-x-2"
+            enter="transition ease-in duration-400"
+            enterFrom="opacity-0 "
+            enterTo="opacity-100  "
+            leave="transition ease-in duration-400"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <SelectBox />
+            <SelectBox />
+            <SelectBox />
+            <SelectBox />
+          </Transition>
           <div className=" flex justify-between space-x-2 ">
             <SearchBar />
-            <button className="grow-2">
+            <button className="grow-2" onClick={() => setOpen(!open)}>
               <div className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-900 dark:hover:bg-gray-800 hover:bg-gray-200 group">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -41,22 +58,25 @@ export default function Index() {
             </button>
           </div>
           <SelectBox />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
-          <RecipeSummary />
+
+          <div className="grid grid-flow-row auto-rows-max gap-y-2 pb-24 mt-1">
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+            <RecipeSummary />
+          </div>
         </div>
       </Transition>
       <BottomNav />
