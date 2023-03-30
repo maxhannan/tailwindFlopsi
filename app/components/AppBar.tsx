@@ -6,7 +6,7 @@ const AppBar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation().pathname;
   return (
-    <nav className="bg-gray-50 px-4 py-2 dark:bg-gray-900  fixed w-full z-50 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="bg-gray-50 px-4 py-2 dark:bg-neutral-800  fixed w-full z-50 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <h1 className="text-xl text-blue-600 dark:text-blue-400 ">Recipes</h1>
         <div className="flex justify-between ">

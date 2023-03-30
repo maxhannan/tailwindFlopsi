@@ -14,7 +14,7 @@ export const BottomNav = () => {
     navigate(`/app/${path}`);
   };
   return (
-    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-lg  bottom-6 left-1/2 border shadow-md  bg-gray-50  dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+    <div className="fixed z-50 w-80 h-16 max-w-md -translate-x-1/2 rounded-lg  bottom-6 left-1/2 border shadow-md  bg-gray-50  dark:bg-neutral-800 border-gray-200 dark:border-gray-600">
       <div className={"grid h-full max-w-lg   mx-auto grid-cols-4"}>
         <button
           data-tooltip-target="tooltip-home"
