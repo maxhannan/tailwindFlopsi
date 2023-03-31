@@ -30,7 +30,7 @@ export const meta: MetaFunction = () => ({
   "apple-mobile-web-app-capable": "yes",
   theme_color: "#f8fafc",
   background_color: "#f8fafc",
-  "apple-mobile-web-app-status-bar-style": "default",
+
   display: "standalone",
   "mobile-web-app-capable": "yes",
   "apple-touch-fullscreen": "yes",
