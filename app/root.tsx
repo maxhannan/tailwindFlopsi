@@ -31,6 +31,7 @@ export const meta: MetaFunction = () => ({
 
   display: "standalone",
   "mobile-web-app-capable": "yes",
+  "apple-mobile-web-app-status-bar-style": "black-translucent",
   "apple-touch-fullscreen": "yes",
 });
 
