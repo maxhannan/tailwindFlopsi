@@ -9,5 +9,6 @@
       "sizes": "512x512"
     }
   ],
-  "display": "standalone"
+  "display": "standalone",
+  "apple-mobile-web-app-status-bar-style": "black-translucent"
 }
