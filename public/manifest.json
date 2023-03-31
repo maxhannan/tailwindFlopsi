@@ -10,5 +10,6 @@
     }
   ],
   "display": "standalone",
-  "apple-mobile-web-app-status-bar-style": "black-translucent"
+  "theme_color": "#f8fafc",
+  "background_color": "#f8fafc"
 }

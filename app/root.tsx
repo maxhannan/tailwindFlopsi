@@ -31,7 +31,7 @@ export const meta: MetaFunction = () => ({
 
   display: "standalone",
   "mobile-web-app-capable": "yes",
-  "apple-mobile-web-app-status-bar-style": "black-translucent",
+
   "apple-touch-fullscreen": "yes",
 });
 
@@ -40,6 +40,11 @@ export default function App() {
     <html lang="en">
       <head>
         <Meta />
+        <meta
+          name="theme-color"
+          content="#872e4e"
+          media="(prefers-color-scheme: dark)"
+        />
         <Links />
       </head>
       <body className="bg-gray-100 dark:bg-neutral-900 ">
