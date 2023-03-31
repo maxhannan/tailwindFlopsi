@@ -26,8 +26,9 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",
   viewport:
-    "width=device-width,initial-scale=1, maximum-scale=1.0,user-scalable=0",
+    "width=device-width,initial-scale=1, maximum-scale=1.0,user-scalable=0  viewport-fit=cover",
   "apple-mobile-web-app-capable": "yes",
+
   theme_color: "#f8fafc",
   background_color: "#f8fafc",
 
