@@ -28,7 +28,8 @@ export const meta: MetaFunction = () => ({
   viewport:
     "width=device-width,initial-scale=1, maximum-scale=1.0,user-scalable=0",
   "apple-mobile-web-app-capable": "yes",
-  // <meta name="theme-color" content="#f22" />
+  theme_color: "#f8fafc",
+  background_color: "#f8fafc",
   "apple-mobile-web-app-status-bar-style": "default",
   display: "standalone",
   "mobile-web-app-capable": "yes",
