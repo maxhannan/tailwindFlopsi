@@ -13,7 +13,7 @@ const RecipePage = () => {
       show={true}
     >
       <div className=" mt-4 ">
-        <table className="table-auto border-collapse border w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <table className="table-auto border-collapse border  w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-neutral-800 dark:text-blue-400">
             <tr>
               <th scope="col" className="p-4">
