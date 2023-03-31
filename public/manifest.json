@@ -9,5 +9,7 @@
       "sizes": "512x512"
     }
   ],
-  "display": "standalone"
+  "display": "standalone",
+  "theme_color": "#f8fafc",
+  "background_color": "#f8fafc"
 }
